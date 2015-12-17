@@ -39,8 +39,6 @@ void print_printers(){
 
 int main(int argc, char** argv)
 {
-  std::string label_size argv[1];
-
   try
   {
     if (argc < 3)
@@ -51,6 +49,8 @@ int main(int argc, char** argv)
 
     int             num_options = 0;
     cups_option_t*  options = NULL;
+
+    std::string label_size = argv[1];
 
     if (label_size.compare("57x32mm") == 0) {
       num_options = cupsAddOption("PageSize", "w162h90", num_options, &options); //11354 Multi-Purpose
