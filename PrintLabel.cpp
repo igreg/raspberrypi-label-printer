@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     } else if (label_size.compare("54x101mm") == 0) {
       num_options = cupsAddOption("PageSize", "w154h286.2", num_options, &options); //99014 Shipping
     } else {
-      throw Error("Label size: %s is not a valid size. Must be WxHmm. Check source code to find supported sizes", label_size);
+      throw Error("Label size is not a valid size. Must be WxHmm. Check source code to find supported sizes");
     }
 
     //num_options = cupsAddOption("scaling", "100", num_options, &options);
